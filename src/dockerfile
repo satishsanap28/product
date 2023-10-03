@@ -1,0 +1,8 @@
+# Dockerfile
+FROM openjdk:11-jre-slim
+
+EXPOSE 9192
+
+ADD target/product_docker.jar product_docker.jar
+
+ENTRYPOINT ["java", "-jar", "product_docker.jar"]
